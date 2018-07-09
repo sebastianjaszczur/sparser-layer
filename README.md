@@ -38,3 +38,5 @@ This way, any output dimension may be any linear combination of input features (
 It is worth noting that using LDL we can basically have way wider networks which compute more, altho they require more layers (as computation power of each layer is severly limited). The impact will be the biggest with bigger layers, maybe more than 10,000 neurons.
 
 For comparison, a dense layer of size 1024->1024 have around 1M parameters. Using slightly less parameters per layer we could have a LDL layer 65536->65536, 64 times as wide!
+
+With a dense layer of size 65536->65536, we have 4 billion parameters (currently unfeasible). But with less than 4 billiom parameters, with LDL we can process 2^27->2^27, that is 134217728->134217728, that is 130 million dimensions wide embedding.
